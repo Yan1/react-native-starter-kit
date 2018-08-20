@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import {
   Container, Content, Form, Item, Label, Input, Text, Button, View,
 } from 'native-base';
+import { Button as AntdButton } from 'antd-mobile-rn'
 import { Actions } from 'react-native-router-flux';
 import Loading from './Loading';
 import Messages from './Messages';
@@ -100,6 +101,9 @@ class Login extends React.Component {
                 </Text>
               </Button>
             </View>
+            <AntdButton type="primary">
+              Submit
+            </AntdButton>
           </Form>
         </Content>
       </Container>
