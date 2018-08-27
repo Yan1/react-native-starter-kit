@@ -48,7 +48,7 @@ const Profile = ({ member, logout }) => (
               <Content padder>
                 <Header
                   title="Hi there,"
-                  content="Please login to gain extra access"
+                  content="Please login22 to gain extra access"
                 />
               </Content>
 

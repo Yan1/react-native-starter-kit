@@ -43,14 +43,17 @@ Login.defaultProps = {
   successMessage: null,
 };
 
-const mapStateToProps = state => ({
-  member: state.member || {},
-  locale: state.locale || null,
-  isLoading: state.status.loading || false,
-  infoMessage: state.status.info || null,
-  errorMessage: state.status.error || null,
-  successMessage: state.status.success || null,
-});
+const mapStateToProps = (state) => {
+  console.log(state)
+  return {
+    member: state.member || {},
+    locale: state.locale || null,
+    isLoading: state.status.loading || false,
+    infoMessage: state.status.info || null,
+    errorMessage: state.status.error || null,
+    successMessage: state.status.success || null,
+  }
+};
 
 const mapDispatchToProps = {
   onFormSubmit: login,

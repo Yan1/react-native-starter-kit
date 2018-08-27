@@ -27,7 +27,8 @@ import UpdateProfileComponent from '../components/UpdateProfile';
 import MemberContainer from '../../containers/Member';
 import ProfileComponent from '../components/Profile';
 
-import AboutComponent from '../components/About';
+// import AboutComponent from '../components/About';
+import HomeComponent from '../components/Home'
 
 const Index = (
   <Stack>
@@ -45,7 +46,8 @@ const Index = (
           icon={() => <Icon name="planet" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
         >
-          <Scene key="home" component={AboutComponent} />
+          {/* <Scene key="home" component={AboutComponent} /> */}
+          <Scene key="home" component={HomeComponent} />
         </Stack>
 
         <Stack
@@ -63,7 +65,11 @@ const Index = (
           icon={() => <Icon name="contact" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
         >
-          <Scene key="profileHome" component={MemberContainer} Layout={ProfileComponent} />
+          <Scene
+            key="profileHome"
+            component={MemberContainer}
+            Layout={ProfileComponent}
+          />
           <Scene
             back
             key="signUp"
@@ -107,7 +113,6 @@ const Index = (
         </Stack>
       </Tabs>
     </Scene>
-
     <Scene
       back
       clone
@@ -119,5 +124,10 @@ const Index = (
     />
   </Stack>
 );
+/* const Index1 = [
+  <Scene key="home" component={AboutComponent} />,
+  <Scene key="recipes" component={RecipesContainer} path="/recipes" />,
+  <Scene key="profileHome" component={MemberContainer} path="/profileHome" />
+] */
 
 export default Index;

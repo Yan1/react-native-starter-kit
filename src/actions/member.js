@@ -91,6 +91,7 @@ export function login(formData) {
     email,
     password,
   } = formData;
+  console.log(email, password)
 
   return dispatch => new Promise(async (resolve, reject) => {
     await statusMessage(dispatch, 'loading', true);
