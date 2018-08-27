@@ -30,6 +30,7 @@ import ProfileComponent from '../components/Profile';
 import AboutCommponent from '../components/About'
 import HomeComponent from '../components/Home'
 import SelfHelpComponent from '../components/SelfHelp/index'
+import SelfHelpDetailComponent from '../components/SelfHelp/Detail'
 import ToolsComponent from '../components/Tools/index'
 import RelationComponent from '../components/Relation/index'
 
@@ -129,10 +130,17 @@ const Index2 = (
 const Index = (
   <Stack>
     <Scene hideNavBar>
-      <Stack title="凤凰运维平台">
-        <Scene key="home" component={HomeComponent}></Scene>
+      <Stack key="home" title="凤凰运维平台">
+        <Scene key="home" initial component={HomeComponent}></Scene>
+      </Stack>
+      <Stack key="selfHelp" title="自助" >
         <Scene key="selfHelp" back component={SelfHelpComponent}></Scene>
+        <Scene key="selfHelpDetail" back component={SelfHelpDetailComponent}></Scene>
+      </Stack>
+      <Stack key="tools" title="小工具">
         <Scene key="tools" back component={ToolsComponent}></Scene>
+      </Stack>
+      <Stack key="relation" title="连接关系">
         <Scene key="relation" back component={RelationComponent}></Scene>
       </Stack>
     </Scene>
