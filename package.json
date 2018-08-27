@@ -50,6 +50,7 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^6.3.1",
+    "antd-mobile-rn": "^2.2.1",
     "babel": "^6.23.0",
     "babel-eslint": "^8.2.6",
     "babel-polyfill": "^6.26.0",

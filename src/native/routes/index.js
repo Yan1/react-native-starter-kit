@@ -27,10 +27,13 @@ import UpdateProfileComponent from '../components/UpdateProfile';
 import MemberContainer from '../../containers/Member';
 import ProfileComponent from '../components/Profile';
 
-// import AboutComponent from '../components/About';
+import AboutCommponent from '../components/About'
 import HomeComponent from '../components/Home'
+import SelfHelpComponent from '../components/SelfHelp/index'
+import ToolsComponent from '../components/Tools/index'
+import RelationComponent from '../components/Relation/index'
 
-const Index = (
+const Index2 = (
   <Stack>
     <Scene hideNavBar>
       <Tabs
@@ -46,8 +49,7 @@ const Index = (
           icon={() => <Icon name="planet" {...DefaultProps.icons} />}
           {...DefaultProps.navbarProps}
         >
-          {/* <Scene key="home" component={AboutComponent} /> */}
-          <Scene key="home" component={HomeComponent} />
+          <Scene key="home" component={AboutCommponent} />
         </Stack>
 
         <Stack
@@ -124,10 +126,16 @@ const Index = (
     />
   </Stack>
 );
-/* const Index1 = [
-  <Scene key="home" component={AboutComponent} />,
-  <Scene key="recipes" component={RecipesContainer} path="/recipes" />,
-  <Scene key="profileHome" component={MemberContainer} path="/profileHome" />
-] */
-
+const Index = (
+  <Stack>
+    <Scene hideNavBar>
+      <Stack title="凤凰运维平台">
+        <Scene key="home" component={HomeComponent}></Scene>
+        <Scene key="selfHelp" back component={SelfHelpComponent}></Scene>
+        <Scene key="tools" back component={ToolsComponent}></Scene>
+        <Scene key="relation" back component={RelationComponent}></Scene>
+      </Stack>
+    </Scene>
+  </Stack>
+)
 export default Index;
